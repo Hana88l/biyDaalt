@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wagamam</title>
+  <link rel="stylesheet" href="jishee.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">Adachi</div>
+    <nav class="header-actions" aria-label="Primary actions">
+      <button class="pill-btn" data-action="call"></button>
+      <button class="pill-btn" data-action="order"></button>
+      <button class="pill-btn" data-action="reserve"></button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <!-- Зүүн талын босоо хэсэг -->
+    <div class="hero-side">
+      <div class="vertical-brand">
+        A<br>D<br>A<br>C<br>H<br>I
+      </div>
+      <div class="social-icons">
+        <button class="social-btn" data-action="facebook">Fc</button>
+        <button class="social-btn" data-action="instagram">Ig</button>
+      </div>
+    </div>
+
+    <!-- Гол контент -->
+    <div class="hero-content">
+      <h1 id="hero-title"></h1>
+      <p id="hero-tagline" class="tagline"></p>
+      <button id="view-menu" class="cta-btn" type="button"></button>
+    </div>
+  </div>
+</section>
+
+  <!-- Mission -->
+  <section class="section">
+    <div class="container">
+      <h2 id="mission-title"></h2>
+      <p id="mission-text-1"></p>
+      <p id="mission-text-2"></p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery">
+    <div class="container">
+      <h2 id="gallery-title"></h2>
+      <div class="grid" id="gallery-grid" aria-label="Gallery">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Menus -->
+  <section class="section menus">
+    <div class="container">
+      <h2 id="menus-title"></h2>
+      <div class="grid cards" id="menus-grid" aria-label="Menus"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">Adachi</div>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+    <div class="container footer-bottom">
+      <div id="footer-address"></div>
+      <div id="footer-hours"></div>
+      <div id="footer-copy"></div>
+      <div class="footer-credits">
+        <span>Developed by</span>
+        <button class="link-btn" data-action="dev"></button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="jishee.js" defer></script>
+</body>
+</html>

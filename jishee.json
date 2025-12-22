@@ -1,0 +1,49 @@
+{
+  "header": {
+    "phoneLabel": "(248) 540-5900",
+    "phoneNumber": "2485405900",
+    "orderLabel": "Order Online",
+    "reserveLabel": "Reservations"
+  },
+  "links": {
+    "order": "https://order.adachirestaurant.com/?openSignup=true",
+    "reserve": "https://resy.com/cities/det/adachi"
+  },
+  "hero": {
+    "title": "Best Sushi & Japanese Food In Michigan",
+    "tagline": "Japanese Inspired Cuisine",
+    "cta": "View Our Menu"
+  },
+  "mission": {
+    "title": "Adachi Birmingham",
+    "text1": "Looking for the best Japanese-inspired restaurant in Birmingham, Michigan or searching for top sushi near Bloomfield Hills, Royal Oak, or West Bloomfield? Adachi, located in the historic Victorian Peabody Mansion, has become a luxury dining destination for guests across Metro Detroit and Oakland County. Known for elevated Japanese cuisine and sophisticated ambiance, Adachi attracts diners who appreciate quality, style, and culinary artistry—earning its reputation as one of the best sushi restaurants in Michigan.\n\n    Our culinary team blends years of expertise with innovative technique, creating a menu that features premium sashimi and nigiri flown in fresh from Japan, alongside artfully crafted small plates, large-format dishes, and signature cocktails. Every ingredient is intentionally selected from both local and international purveyors, reflecting our commitment to refinement and exceptional taste in every detail.",
+    "text2": "Adachi stands apart by merging fine dining with a social, vibrant energy. The elegant dining room, lively sushi lounge, and polished cocktail bar create a stylish atmosphere where each visit feels memorable and curated. Guests from Birmingham, Bloomfield Hills, Royal Oak, Troy, Detroit, Clawson, Franklin, Clarkston, and West Bloomfield make Adachi their go-to destination for upscale sushi and modern Japanese dining.\n\nWhether you’re joining us for a romantic evening, a business dinner, a private celebration, or a night out with friends, Adachi delivers world-class hospitality and an unforgettable culinary experience. Come see why guests throughout Metro Detroit say the drive is worth it—and why Adachi continues to set the standard for luxury sushi dining in Michigan."
+  },
+  "gallery": {
+    "title": "Stylish and Flavorful Components",
+    "images": [
+      "https://adachirestaurant.com/wp-content/uploads/2020/11/home-pic-2.png",
+      "https://adachirestaurant.com/wp-content/uploads/2020/11/home-pic-1.png",
+      "https://adachirestaurant.com/wp-content/uploads/2020/11/home-pic-4.png",
+      "https://adachirestaurant.com/wp-content/uploads/2020/11/home-pic-3.png",
+      "https://adachirestaurant.com/wp-content/uploads/2020/11/home-pic-5.png"
+    ]
+  },
+  "menus": {
+    "title": "View Our Menu",
+    "items": [
+      { "label": "Dining Menu",   "href": "https://adachirestaurant.com/pdf/menu.pdf",        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-dinner-menu-min.jpg" },
+      { "label": "Drink Menu",    "href": "https://adachirestaurant.com/pdf/drink-menu.pdf",  "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/home-menu.jpg" },
+      { "label": "Happy Hour",    "href": "https://adachirestaurant.com/pdf/happy-hour.pdf",  "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg" },
+      { "label": "Dessert Menu",  "href": "https://adachirestaurant.com/pdf/dessert.pdf",     "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg" }
+    ]
+  },
+  "footer": {
+    "links": ["Home", "About", "Gallery", "Catering", "Contact"],
+    "address": "325 S Old Woodward, Birmingham, MI 48009",
+    "hours": "Sun-Thu 11:30am-11pm | Fri-Sat 11:30am-12am",
+    "copy": "© 2026 Adachi Restaurant",
+    "devLabel": "BMG MEDIA",
+    "devUrl": "https://bmgmediaco.com/"
+  }
+}
