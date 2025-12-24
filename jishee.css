@@ -35,14 +35,26 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   background: url("https://adachirestaurant.com/wp-content/uploads/2020/11/home-hero-scaled.jpg") center/cover no-repeat;
   display: grid; 
   place-items: center;
+  font-family: "Style Script", cursive;
 }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35)); }
 .hero-content { position: relative; text-align: center; color: #fff; padding: 0 20px; }
 .hero-content h1 { font-size: 2rem; margin: 0 0 8px; }
-.tagline { font-size: 1.1rem; color: #eaeaea; margin: 0 0 18px; }
+.tagline { font-size: 200px; color: #ebdfd4; width:500px;position: absolute;left: -600px;top:-80px; line-height: 180px;letter-spacing: 10px; }
+#hero-title{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 400;
+    color: #ebdfd4;
+    left: -480px;
+    top: 90px;
+}
 .cta-btn {
   background: #fff; color: #000; border: none; cursor: pointer;
   padding: 10px 18px; border-radius: var(--radius); font-weight: 600;
+  position: absolute;
+  right: -400px;
+  top: 630px;
 }
 .cta-btn:hover { background: #f3f3f3; }
 .hero-inner {
@@ -56,20 +68,24 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color:#ebdfd4;
 }
 
 .vertical-brand {
   font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: 30px;
+  position: absolute;
+  left: 30px;
+  top: 300px;
 }
 
 .social-icons {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
 }
 
 .social-btn {
