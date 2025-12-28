@@ -28,6 +28,117 @@
   border-color: #777;
 }
 
+/* SECTION */
+.wagamama
+    {
+        position: relative;
+        background: url('https://adachirestaurant.com/wp-content/themes/adachi_new/images/menu-desktop-bg.jpg');
+        background-size: cover;
+        width: 85%;
+        margin-top: -200px;
+        z-index: 1;
+    }
+
+.overlap-wrapper {
+    position: relative;
+    margin-top: -220px; /* overlap */
+    /* padding-right: 10px; */
+}
+
+.image-card {
+    width: 75%;
+    right: 0px;
+    position: absolute;
+}
+
+.image-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: flex;
+}
+
+
+
+/* CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    z-index: 1;
+    max-width: 1300px;
+    height: 900px;
+    padding-right: 10%;
+    TOP: 50PX;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    padding-right: 28%;
+    font-size: 66px;
+    font-weight: 200px;
+    margin-bottom: 40px;
+    color: #ebc683;
+    text-align: left;
+}
+
+/* TEXT */
+.text {
+  display: flex;
+  flex-direction: row;
+    gap: 20px;
+    max-width: 700px;
+    height: 350px;
+    position: relative;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .text {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .wagamama {
+        height: 1000px;
+    }
+    .menu-btn {
+        position: relative;
+    }
+    .image-card {
+        display: none;
+    }
+}
+
+.text-main p {
+  width: 350px;
+  height: 200px;
+        font-size:  14px;
+    line-height: 1.7;
+    color: #ddc69f;
+    margin-bottom: -20px;
+}
+
+/* BUTTON */
+.menu-btn {
+    display: flex;
+    top: 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #e0d0b7;
+    border-bottom: 2px solid rgba(233,229,223,0.6);
+    padding-bottom: 6px;
+    transition: all 0.3s ease;
+    left: 770px;
+}
+
+.menu-btn:hover {
+    opacity: 0.7;
+}
 /* Hero */
 .hero {
   position: relative;
@@ -213,8 +324,7 @@
 .gallery-positioned {
   position: relative;
   width: 100%;
-  height: 600px;
-  overflow: hidden;
+  height: 1500px;
 }
 .gallery-positioned img {
   position: absolute;
@@ -385,7 +495,7 @@ footer {
   margin-bottom: 15px;
 }
 #menu-footer-menu li a {
-  color: #fff;
+  color: #ebdfd4;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
