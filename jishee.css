@@ -1,62 +1,27 @@
-:root {
-  --bg: #ffffff;
-  --text: #111111;
-  --muted: #666666;
-  --accent: #c59d5f; /* warm gold accent */
-  --dark: #000000;
-  --hero-h: 64vh;
-  --container: 1100px;
-  --radius: 9999px;
-}
-
 * {
   box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Noto Serif Display", serif;
-}
-
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Header */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
-  background: var(--dark);
+  background: black;
   color: #fff;
 }
 .site-header img {
   width: 150px;
   height: 100px;
 }
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.header-actions {
-  display: flex;
-  gap: 10px;
-}
 .pill-btn {
   border: 1px solid #444;
   background: transparent;
   color: #fff;
   padding: 8px 14px;
-  border-radius: var(--radius);
+  border-radius: 20px;
   cursor: pointer;
 }
 .pill-btn:hover {
