@@ -254,7 +254,7 @@ body {
   position: absolute;
   width: 220px;
   border-radius: 12px;
-  z-index: 1; 
+  z-index: 1;
   animation: spin360 12s linear infinite;
 }
 
@@ -268,20 +268,31 @@ body {
   line-height: 1.05;
   color: #ebdfd4;
 
-  z-index: 3;          /* 🔑 зурагнаас дээгүүр */
+  z-index: 3; /* 🔑 зурагнаас дээгүүр */
   max-width: 520px;
   pointer-events: none;
 }
 
-.pic1 { top: 120px; left: 80px; }
-.pic2 { top: 160px; right: 100px; }
-.pic3 { top: 300px; left: 260px; }
-.pic4 { bottom: 80px; right: 180px; }
-.pic5 { bottom: 120px; left: 420px; }
-
-
-
-
+.pic1 {
+  top: 120px;
+  left: 80px;
+}
+.pic2 {
+  top: 160px;
+  right: 100px;
+}
+.pic3 {
+  top: 300px;
+  left: 260px;
+}
+.pic4 {
+  bottom: 80px;
+  right: 180px;
+}
+.pic5 {
+  bottom: 120px;
+  left: 420px;
+}
 
 /* 360° эргэлт */
 @keyframes spin360 {
@@ -512,6 +523,54 @@ footer {
     position: static;
     margin-top: 30px;
   }
+  .gallery-positioned {
+    height: auto;
+    padding: 40px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .gallery-title {
+    position: static;
+    grid-column: 1 / -1;
+
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .gallery-positioned img {
+    position: static;
+    width: 100%;
+    animation: none;
+  }
+  .cards.grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* stagger effect болиулна */
+  .cards.grid .card {
+    transform: none !important;
+  }
+
+  .card img {
+    height: 420px;
+  }
+
+  #menus-title {
+    position: static;
+    transform: none;
+    font-size: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .menus .container {
+    padding: 40px 20px;
+  }
 }
 
 /* MOBILE */
@@ -540,5 +599,35 @@ footer {
       font-size: 14px;
       padding: 10px 20px;
     }
+  }
+  .gallery-positioned {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  .cards.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 320px;
+    animation: none; /* performance + UX */
+  }
+
+  #menus-title {
+    font-size: 56px;
+    line-height: 1.1;
+  }
+
+  .card .card-meta {
+    padding: 14px;
+  }
+
+  .card .go-btn {
+    padding: 8px 14px;
+    font-size: 14px;
   }
 }
