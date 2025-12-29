@@ -1,5 +1,5 @@
 // JSON-г гаднаас уншина
-fetch(".json")
+fetch("jishee.json")
   .then(r => r.json())
   .then(data => init(data))
   .catch(err => console.error("JSON алдаа:", err));
@@ -150,9 +150,125 @@ function init(data) {
   devBtn.textContent = data.footer.devLabel;
   devBtn.addEventListener("click", () => { window.location.href = data.footer.devUrl; });
 }
-document.querySelector('[data-action="facebook"]').addEventListener("click", () => {
-  window.open("https://www.facebook.com/AdachiRestaurant/", "_blank");
-});
-document.querySelector('[data-action="instagram"]').addEventListener("click", () => {
-  window.open("https://www.instagram.com/adachirestaurant/", "_blank");
-});
+document.querySelector('[data-action="facebook"]').
+
+
+// OPEN / CLOSE
+document.getElementById("open-cart").onclick = () => toggleCart(true)
+document.getElementById("close-cart").onclick = () => toggleCart(false)
+overlay.onclick = () => toggleCart(false)
+
+function toggleCart(open) {
+  drawer.classList.toggle("active", open)
+  overlay.classList.toggle("active", open)
+}
+
+document.querySelectorAll(".add").forEach(btn => {
+  btn.onclick = () => {
+    const p = btn.parentElement
+    const id = p.dataset.id
+    const name = p.dataset.name
+    const price = +p.dataset.price
+
+    const item = cart.find(i => i.id === id)
+    item ? item.qty++ : cart.push({ id, name, price, qty: 1 })
+    updateCart()
+  }
+})
+
+function updateCart() {
+  cartItems.innerHTML = ""
+  let total = 0
+
+  cart.forEach(item => {
+    total += item.price * item.qty
+
+    const div = document.createElement("div")
+    div.className = "cart-item"
+    div.innerHTML = `
+      <div>
+        <strong>${item.name}</strong>
+        <div class="qty">
+          <button onclick="changeQty('${item.id}',-1)">➖</button>
+          ${item.qty}
+          <button onclick="changeQty('${item.id}',1)">➕</button>
+        </div>
+      </div>
+      <div>
+        $${item.price * item.qty}
+        <button onclick="removeItem('${item.id}')">❌</button>
+      </div>
+    `
+    cartItems.appendChild(div)
+  })
+
+  cartTotal.textContent = total
+  cartCount.textContent = cart.reduce((s,i)=>s+i.qty,0)
+  localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+window.changeQty = (id, d) => {
+  const item = cart.find(i => i.id === id)
+  item.qty += d
+  if (item.qty <= 0) cart = cart.filter(i => i.id !== id)
+  updateCart()
+}
+
+window.removeItem = id => {
+  cart = cart.filter(i => i.id !== id)
+  updateCart()
+}
+
+// CHECKOUT (DEMO)
+document.querySelector(".stripe").onclick = () =>
+  window.location.href = "https://stripe.com/payments/checkout"
+
+document.querySelector(".paypal").onclick = () =>
+  window.location.href = "https://www.paypal.com/checkout"
+
+updateCart()
+
+
+const stripe = Stripe("pk_test_xxxxx")
+
+async function checkout(cart) {
+  const res = await fetch("http://localhost:4242/create-payment-intent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items: cart })
+  })
+
+  const { clientSecret } = await res.json()
+
+  const elements = stripe.elements({ clientSecret })
+  const paymentElement = elements.create("payment")
+  paymentElement.mount("#payment-element")
+
+  document.getElementById("payment-form").onsubmit = async e => {
+    e.preventDefault()
+
+    const { error, paymentIntent } =
+      await stripe.confirmPayment({
+        elements,
+        confirmParams: {
+          return_url: "http://localhost/success.html"
+        },
+        redirect: "if_required"
+      })
+
+    if (!error) {
+      await fetch("http://localhost:4242/save-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: cart,
+          total: paymentIntent.amount / 100,
+          paymentIntentId: paymentIntent.id
+        })
+      })
+
+      alert("Payment successful!")
+    }
+  }
+}
+checkout(cart)
