@@ -1,6 +1,6 @@
 {
   "header": {
-    "phoneLabel": "(+976) 8989-3047",
+    "phoneLabel": "SIGN IN",
     "phoneNumber": "97689893047",
     "orderLabel": "Order Online",
     "reserveLabel": "Reservations"
@@ -22,19 +22,70 @@
   "menus": {
     "title": "View Our Menu",
     "items": [
-      { "label": "Dining Menu",   "href": "https://adachirestaurant.com/pdf/menu.pdf",        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-dinner-menu-min.jpg" },
-      { "label": "Drink Menu",    "href": "https://adachirestaurant.com/pdf/drink-menu.pdf",  "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/home-menu.jpg" },
-      { "label": "Happy Hour",    "href": "https://adachirestaurant.com/pdf/happy-hour.pdf",  "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg" },
-      { "label": "Dessert Menu",  "href": "https://adachirestaurant.com/pdf/dessert.pdf",     "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg" }
+      {
+        "label": "Dining Menu",
+        "href": "https://adachirestaurant.com/pdf/menu.pdf",
+        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-dinner-menu-min.jpg"
+      },
+      {
+        "label": "Drink Menu",
+        "href": "https://adachirestaurant.com/pdf/drink-menu.pdf",
+        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/home-menu.jpg"
+      },
+      {
+        "label": "Happy Hour",
+        "href": "https://adachirestaurant.com/pdf/happy-hour.pdf",
+        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg"
+      },
+      {
+        "label": "Dessert Menu",
+        "href": "https://adachirestaurant.com/pdf/dessert.pdf",
+        "image": "https://adachirestaurant.com/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg"
+      }
     ]
   },
   "menu": [
-    { "name": "Home", "url": "https://adachirestaurant.com/" },
-    { "name": "About", "url": "https://adachirestaurant.com/about/" },
-    { "name": "Gallery", "url": "https://adachirestaurant.com/gallery/" },
-    { "name": "Gift Cards", "url": "https://order.adachirestaurant.com/gift-card/?onCloseTarget=%2F/" },
-    { "name": "Catering", "url": "https://adachirestaurant.com/catering/" },
-    { "name": "Order", "url": "https://order.adachirestaurant.com/?openSignup=true" },
-    { "name": "Contact", "url": "https://adachirestaurant.com/location/" }
+    {
+      "name": "Home",
+      "url": "https://adachirestaurant.com/"
+    },
+    {
+      "name": "About",
+      "url": "https://adachirestaurant.com/about/"
+    },
+    {
+      "name": "Gallery",
+      "url": "https://adachirestaurant.com/gallery/"
+    },
+    {
+      "name": "Gift Cards",
+      "url": "https://order.adachirestaurant.com/gift-card/?onCloseTarget=%2F/"
+    },
+    {
+      "name": "Catering",
+      "url": "https://adachirestaurant.com/catering/"
+    },
+    {
+      "name": "Order",
+      "url": "https://order.adachirestaurant.com/?openSignup=true"
+    },
+    {
+      "name": "Contact",
+      "url": "https://adachirestaurant.com/location/"
+    }
+  ],
+  "users": [
+    {
+      "id": "9b30",
+      "name": "enhjin",
+      "email": "enzithegoatt@gmail.com",
+      "password": "enzi123"
+    },
+    {
+      "id": "8380",
+      "name": "Б. Энхжин",
+      "email": "hi@gmail.com",
+      "password": "123"
+    }
   ]
 }

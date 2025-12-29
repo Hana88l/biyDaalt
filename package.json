@@ -1,0 +1,22 @@
+{
+  "name": "biydaalt",
+  "version": "1.0.0",
+  "main": "jishee.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hana88l/biyDaalt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hana88l/biyDaalt/issues"
+  },
+  "homepage": "https://github.com/Hana88l/biyDaalt#readme",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

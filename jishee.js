@@ -127,7 +127,33 @@ brand.addEventListener("click", () => {
   const items = menu.querySelectorAll("li");
   items.forEach((item) => {
     item.style.animation = "none";
-    item.offsetHeight; 
+    item.offsetHeight;
     item.style.animation = "";
   });
+});
+
+const authBtn = document.getElementById("authBtn");
+
+// 👉 login хийсэн эсэхийг шалгана
+const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+if (isLoggedIn) {
+  authBtn.textContent = "SIGN OUT";
+  authBtn.href = "#";
+} else {
+  authBtn.textContent = "SIGN IN";
+  authBtn.href = "./login/register.html";
+}
+
+// 👉 SIGN OUT дарах үед
+authBtn.addEventListener("click", function (e) {
+  if (isLoggedIn) {
+    e.preventDefault();
+
+    // logout
+    localStorage.removeItem("isLoggedIn");
+
+    // refresh эсвэл redirect
+    window.location.href = "./index.html";
+  }
 });

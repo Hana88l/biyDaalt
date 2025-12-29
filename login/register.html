@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="register.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../img/Screenshot_2025-12-20_192848-removebg-preview - Copy.png"
+    />
+    <title>sign-up__sign-in</title>
+  </head>
+
+  <body>
+    <div class="hero2">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source
+          src="https://cdn.bfldr.com/4HTSVWZZ/at/nx2b65xh44tskwvbg6vptrv/Constance-Belle_Mare_Plage-Video_Teaser.mp4"
+          type="video/mp4 "
+        />
+      </video>
+    </div>
+    <div class="back-button" onclick="goBack()">← Back</div>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form id="registerForm">
+          <h3>Create Account</h3>
+
+          <input type="text" id="name" placeholder="Name" />
+          <input type="email" id="email" placeholder="Enter E-mail" />
+          <input type="password" id="password" placeholder="Enter Password" />
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="form-container sign-in">
+        <form id="loginForm">
+          <h1>Sign In</h1>
+
+          <input type="email" id="loginEmail" placeholder="Enter E-mail" />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter Password"
+          />
+
+          <a href="#">Forget Password?</a>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h4>
+              Welcome To <br />
+              Sun hotel
+            </h4>
+            <p>Sign in With Email & Password</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h2>Hello customer</h2>
+            <p>Sign up now and enjoy our site</p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
